@@ -1,23 +1,24 @@
 package BinarySearchTree;
+
+// Mendefinisikan simpul atau node dalam pohon biner
 class Node {
     int data;
     Node left, right;
 
-    //  * Konstruktor Node untuk menciptakan sebuah node baru.
-    
+    //Konstruktor Node untuk menciptakan sebuah node baru.
     public Node(int data) {
         this.data = data;
         left = right = null;
     }
 }
 
-
-//  * Kelas BinarySearchTree menyediakan implementasi untuk Binary Search Tree.
+// Kelas BinarySearchTree menyediakan implementasi untuk Binary Search Tree.
  
 public class BinarySearchTree {
 
-    Node root;  // Node akar dari BST
+    Node root;  // Mendeklarasikan node root dari BST
 
+    // Menyisipkan suatu nilai ke dalam BST
     public Node insert(Node root, int data) {
         // Jika sub-pohon kosong, ciptakan node baru sebagai akar dari sub-pohon
         if (root == null) {
@@ -32,11 +33,12 @@ public class BinarySearchTree {
             root.right = insert(root.right, data);
         }
 
-        return root;
+        // Mengembalikan nilai root
+        return root; 
     }
 
    
-    //  * Fungsi untuk mencetak struktur pohon dalam bentuk folder.
+    // Metode untuk mencetak tree dengn terstruktur
     
     public void printTree(Node node, String indent, boolean last) {
         if (node != null) {
@@ -47,7 +49,8 @@ public class BinarySearchTree {
         }
     }
 
-    
+    //Metode main untuk menjalankan program
+
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();  // Membuat objek BST
 

@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-/**
- * Kelas yang merepresentasikan sebuah node pada pohon biner.
+/*
+ Kelas yang merepresentasikan sebuah node pada pohon biner.
  */
 class Node {
     String value;
@@ -17,7 +17,7 @@ class Node {
      * Konstruktor untuk kelas Node.
      * @param value Nilai dari node.
      */
-    public Node(String value) {
+    public Node(String value) {  //konstruktor untuk membuat node
         this.value = value;
         left = null;
         right = null;
